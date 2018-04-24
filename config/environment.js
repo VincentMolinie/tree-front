@@ -28,10 +28,13 @@ module.exports = function(environment) {
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    // ENV.APP.LOG_VIEW_LOOKUPS = true;*
+    ENV.host = 'https://api-dev.tradee.com:446';
   }
 
   if (environment === 'test') {
+    ENV.host = 'https://api-dev.tradee.com:446';
+
     // Testem prefers this...
     ENV.locationType = 'none';
 
@@ -44,6 +47,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV.host = 'https://api-dev.tradee.com:446';
     // here you can enable a production-specific feature
   }
 

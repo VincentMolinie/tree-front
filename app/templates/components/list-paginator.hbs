@@ -1,0 +1,23 @@
+<li class="{{if (eq page 1) 'disabled' 'waves-effect'}}">
+	<a href="#!" {{action 'decrPage'}}>
+		<i class="material-icons">chevron_left</i>
+	</a>
+</li>
+
+{{#each listNumberPage as |numberPage|}}
+  {{#if (eq numberPage 0)}}
+    <li class="dots">
+      <span>...</span>
+    </li>
+  {{else}}
+  	<li class="{{if (eq page numberPage) 'active' 'waves-effect'}}" {{action 'selectPage' numberPage}}>
+  		<a href="#!">{{numberPage}}</a>
+  	</li>
+  {{/if}}
+{{/each}}
+
+<li class="{{if (eq page nbPages) 'disabled' 'waves-effect'}}">
+	<a href="#!" {{action 'incrPage'}}>
+		<i class="material-icons">chevron_right</i>
+	</a>
+</li>

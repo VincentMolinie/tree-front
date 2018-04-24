@@ -1,0 +1,11 @@
+{{#if model}}
+    <ul class="collection">
+    {{#each model as |tree|}}
+        {{tree-view tree=tree}}
+    {{/each}}
+    </ul>
+
+    {{list-paginator from=from size=size total=meta.total}}
+{{else}}
+    No Result;
+{{/if}}
